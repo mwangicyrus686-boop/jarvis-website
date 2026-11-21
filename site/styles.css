@@ -76,3 +76,20 @@ details[open]{border-color:#4cc3d9}
 .dashboard-strip .bar{margin-top:8px;height:6px}
 @media (max-width:1000px){.readiness-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:800px){.app-shell{grid-template-columns:1fr}.workspace-rail{position:static;min-height:0}.rail-status{display:none}.workspace-rail{display:flex;flex-wrap:wrap}.rail-label{width:100%}.rail-item{margin:2px}.ready-banner{align-items:flex-start}.readiness-grid{grid-template-columns:1fr}}
+.workshop{max-width:1260px}
+.workshop-hero{background:linear-gradient(145deg,#111b2b,#0d1421);border:1px solid #31425a;border-radius:18px;padding:24px}
+.workshop-hero h1{font-size:clamp(25px,4vw,36px);line-height:1.2}
+.workshop-hero>.m{font-size:17px;margin:6px 0 0}
+.workshop-hero .dashboard-strip{margin-bottom:0}
+.workshop-hero .callout{margin-top:18px}
+.workshop-actions{margin:16px 0}
+.workshop-tabs{display:flex;gap:8px;overflow-x:auto;background:#101a28;border:1px solid #2b3c52;border-radius:14px;padding:10px}
+.workshop-tabs a{white-space:nowrap;text-decoration:none;color:#cfe0f7;background:#141f2f;border:1px solid #30445c;border-radius:999px;padding:8px 14px;font-size:13px}
+.workshop-tabs a:hover{color:#fff;border-color:#4cc3d9}
+.workshop-status{justify-content:space-between;margin:18px 0}
+.workshop-section{margin-top:24px;scroll-margin-top:16px}
+.workshop-section>.card-heading h2{font-size:22px}
+.workshop .markets{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.market-value{font-size:28px;font-weight:800;letter-spacing:.02em;margin:8px 0}
+.workshop-section .row{margin-bottom:14px}
+@media (max-width:600px){.workshop-hero{padding:18px}.workshop-hero .row{align-items:flex-start;flex-direction:column}.workshop-status{align-items:flex-start;flex-direction:column}}

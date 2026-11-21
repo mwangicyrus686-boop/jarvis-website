@@ -1,9 +1,9 @@
 # JARVIS website (preview)
 
-A plain static preview of the JARVIS Trading Workshop: Home, Dashboard, Strategy Lab, Bots, Builder, Methodology, Safety and Integrations pages. The pages show sample data and a design only. The working JARVIS app runs locally and is not part of this repository. Demo accounts and paper trading only; not financial advice.
+A plain static preview of the JARVIS Trading Workshop: Home, Dashboard, Workshop Dashboard, Strategy Lab, Bots, Builder, Methodology, Safety and Integrations pages. The pages show sample data and a design only. The working JARVIS app runs locally and is not part of this repository. Demo accounts and paper trading only; not financial advice.
 
 ## Folder layout
-- `site/`: the website (8 HTML pages, `styles.css`, `.nojekyll`). This is the only folder that gets published.
+- `site/`: the website (9 HTML pages, `styles.css`, `.nojekyll`). This is the only folder that gets published.
 - `tools/check_site.py`: offline checks (links, no scripts or external requests, disclaimer, no credentials). It runs before every deploy.
 - `.github/workflows/pages.yml`: checks the site and deploys `site/` to GitHub Pages on every push to `main`.
 - `.github/copilot-instructions.md`: the rules GitHub Copilot follows in this repository.

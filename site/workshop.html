@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workshop UI Preview | JARVIS</title>
+<meta name="description" content="Static, redacted preview of the local JARVIS Trading Workshop dashboard">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><a class="brand" href="index.html">JARVIS</a><nav class="nav" style="padding:0;border:0" aria-label="Pages"><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="workshop.html" aria-current="page">Workshop UI</a><a href="strategy-lab.html">Strategy Lab</a><a href="bots.html">Bots</a><a href="builder.html">Builder</a><a href="methodology.html">Methodology</a><a href="safety.html">Safety</a><a href="integrations.html">Integrations</a></nav><span class="sp" style="flex:1"></span><span class="pill ok">Demo / paper only</span><span class="pill">Preview site</span></header>
+<main id="main" class="w workshop">
+<div class="workshop-hero">
+<div class="row" style="margin:0"><h1>JARVIS Trading Workshop V3.5</h1><span class="sample">Static preview - no live data</span></div>
+<p class="m">Research, Strategy Lab and paper-signal monitoring</p>
+<div class="dashboard-strip">
+<div class="metric"><span class="metric-label">Connection</span><strong class="a">Preview / offline</strong></div>
+<div class="metric"><span class="metric-label">Ticks</span><strong>--</strong></div>
+<div class="metric"><span class="metric-label">Backtests</span><strong>Sample view</strong></div>
+<div class="metric"><span class="metric-label">Mode</span><strong>Research</strong></div>
+</div>
+<div class="callout warning"><b>Real trading is disabled.</b> This public page is a static preview and cannot connect to Deriv, display account data, or control the local application.</div>
+</div>
+<div class="row workshop-actions">
+<a class="btn" href="#market-research">Market research</a>
+<a class="btn2" href="#strategy-lab">Strategy Lab</a>
+<a class="btn2" href="#paper-bots">Paper bots</a>
+<a class="btn2" href="#accounts">Accounts &amp; settings</a>
+</div>
+<nav class="workshop-tabs" aria-label="Workshop preview sections">
+<a href="#market-research">Home</a><a href="#market-research">Markets</a><a href="#strategy-lab">Strategy Lab</a><a href="#paper-bots">Paper Bots</a><a href="#paper-history">Paper History</a><a href="#accounts">Accounts &amp; Settings</a>
+</nav>
+<div class="row workshop-status"><span class="m">Preview updated when published</span><span class="tag a">WAITING FOR LIVE DATA</span></div>
+<section id="market-research" class="workshop-section">
+<div class="card-heading"><h2>Market Research</h2><span class="sample">Sample layout</span></div>
+<div class="grid markets">
+<div class="card"><h3>R_100</h3><div class="market-value">--</div><div class="m">Waiting for ticks</div><span class="tag">No signal</span></div>
+<div class="card"><h3>R_75</h3><div class="market-value">--</div><div class="m">Waiting for ticks</div><span class="tag">No signal</span></div>
+<div class="card"><h3>R_50</h3><div class="market-value">--</div><div class="m">Waiting for ticks</div><span class="tag">No signal</span></div>
+</div>
+</section>
+<section id="strategy-lab" class="workshop-section">
+<div class="card-heading"><h2>Strategy Lab Results</h2><span class="tag">No sample results loaded</span></div>
+<div class="card table-scroll"><table><tr><th>Symbol</th><th>Strategy</th><th>Trades</th><th>Win rate</th><th>Return</th><th>State</th></tr>
+<tr><td>R_100</td><td>EMA 5/20</td><td>--</td><td>--</td><td>--</td><td>Waiting</td></tr>
+<tr><td>R_75</td><td>RSI 14</td><td>--</td><td>--</td><td>--</td><td>Waiting</td></tr>
+<tr><td>R_50</td><td>Momentum 5</td><td>--</td><td>--</td><td>--</td><td>Waiting</td></tr></table></div>
+<p class="m">Results depend on local data and test settings. Past or simulated results do not establish future performance.</p>
+</section>
+<section id="paper-bots" class="workshop-section">
+<div class="card-heading"><h2>Strategy Research &amp; Paper Bots</h2><span class="sample">Controls disabled</span></div>
+<div class="row"><button class="btn" type="button" disabled title="Available in the local JARVIS app">Arm paper strategy bots</button><button class="btn2" type="button" disabled title="Available in the local JARVIS app">Stop paper bots</button><button class="btn2" type="button" disabled title="Available in the local JARVIS app">Run paper backtests</button></div>
+<p class="m">Research simulations only. These controls do not operate from the public website.</p>
+<div class="card table-scroll"><table><tr><th>Bot</th><th>Current target</th><th>Sample reason</th></tr>
+<tr><td>20-Bar Breakout</td><td>FLAT</td><td>Waiting for market history</td></tr>
+<tr><td>EMA Cross 20/50</td><td>FLAT</td><td>Waiting for required bars</td></tr>
+<tr><td>MACD Histogram</td><td>FLAT</td><td>Waiting for market history</td></tr>
+<tr><td>RSI 14 Trend Filtered</td><td>FLAT</td><td>Waiting for required bars</td></tr></table></div>
+</section>
+<section id="paper-history" class="workshop-section">
+<div class="card-heading"><h2>Recent paper bot events</h2><span class="tag">No personal history</span></div>
+<div class="card"><p class="m">Real application logs and trading history are not included in this preview.</p></div>
+</section>
+<section id="accounts" class="workshop-section">
+<div class="card-heading"><h2>Accounts &amp; Settings</h2><span class="tag a">Local app only</span></div>
+<div class="card"><p class="m">Account selection, OAuth login, balances, and all settings stay inside the local application. This public page has no account connection or credentials.</p></div>
+</section>
+</main>
+<footer>Preview of the JARVIS project: sample data, demo accounts and paper trading only. Not financial advice. The indices JARVIS studies behave like random walks, so paper results do not show a trading edge.</footer>
+</body>
+</html>
