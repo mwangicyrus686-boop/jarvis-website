@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integrations | JARVIS</title>
+<meta name="description" content="Local-only QuantumBridge connection for JARVIS paper research signals">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><a class="brand" href="index.html">JARVIS</a><nav class="nav" style="padding:0;border:0" aria-label="Pages"><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="strategy-lab.html">Strategy Lab</a><a href="bots.html">Bots</a><a href="builder.html">Builder</a><a href="methodology.html">Methodology</a><a href="safety.html">Safety</a><a href="integrations.html" aria-current="page">Integrations</a></nav><span class="sp" style="flex:1"></span><span class="pill ok">Demo / paper only</span><span class="pill">Preview site</span></header>
+<main id="main" class="w">
+<div class="row" style="margin:0"><h1 style="font-size:32px">QuantumBridge integration</h1><span class="sample">Local-only signal bridge</span></div>
+<p class="m">QuantumBridge can read JARVIS market state and research signals from a small localhost API. Both applications must be running on the same computer.</p>
+<div class="callout warning"><b>Safety boundary:</b> The JARVIS plugin exposes paper-research signals only. It does not expose credentials, place orders, or enable real trading. Keep both services bound to localhost.</div>
+<div class="k">Connection steps</div>
+<ol class="steps">
+<li><b>Start JARVIS V3.5</b><div class="m">Run the local workshop and confirm its dashboard opens on 127.0.0.1:5000.</div></li>
+<li><b>Start QuantumBridge locally</b><div class="m">Run its local app/API proxy on localhost:5173. The public website cannot provide this server-side bridge.</div></li>
+<li><b>Open Connection Options</b><div class="m">Choose JARVIS Link, then select Connect JARVIS to load the current paper-signal snapshot.</div></li>
+<li><b>Review, do not automate</b><div class="m">Treat signals as informational. Research gates can return HOLD, and results do not demonstrate a trading edge.</div></li>
+</ol>
+<div class="k">Local endpoints</div>
+<div class="card">
+<table><tr><th>Endpoint</th><th>Purpose</th><th>Access</th></tr>
+<tr><td><code>/api/quantumbridge/status</code></td><td>Mode, market connection and configured symbols</td><td>Loopback only</td></tr>
+<tr><td><code>/api/quantumbridge/signals</code></td><td>Current gated research signals</td><td>Loopback only</td></tr></table>
+</div>
+<div class="k">Public vs local</div>
+<div class="grid">
+<div class="card"><h3>Published website</h3><div class="m">Static preview pages only. GitHub Pages does not run the JARVIS API or proxy to your computer.</div></div>
+<div class="card"><h3>Separate source project</h3><div class="m">The read-only plugin source is published separately as <code>mwangicyrus686-boop/jarvis-quantumbridge-plugin</code>. No account data or credentials are included.</div></div>
+</div>
+</main>
+<footer>Preview of the JARVIS project: sample data, demo accounts and paper trading only. Not financial advice. The indices JARVIS studies behave like random walks, so paper results do not show a trading edge.</footer>
+</body>
+</html>
