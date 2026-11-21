@@ -51,3 +51,28 @@ details[open]{border-color:#4cc3d9}
 .markets div{border:1px solid #26344f;border-radius:8px;padding:10px}
 .markets h3{font-size:15px}
 @media (max-width:800px){.dashboard-layout{grid-template-columns:1fr}.markets{grid-template-columns:1fr}}
+.app-shell{display:grid;grid-template-columns:170px minmax(0,1fr);align-items:start;gap:16px;margin-top:20px}
+.workspace-rail{position:sticky;top:16px;background:#10182a;border:1px solid #26344f;border-radius:12px;padding:10px;min-height:390px}
+.rail-label{display:block;color:#4cc3d9;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;padding:8px 10px 10px}
+.rail-item{display:block;color:#9db4d6;text-decoration:none;font-size:13px;padding:9px 10px;border-radius:7px;margin:2px 0;border-left:2px solid transparent}
+.rail-item:hover,.rail-item.active{color:#fff;background:#17233a;border-left-color:#4cc3d9}
+.rail-status{display:flex;gap:9px;align-items:flex-start;border-top:1px solid #26344f;margin-top:18px;padding:14px 8px 4px;font-size:12px}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#ffd27a;margin-top:5px;box-shadow:0 0 10px rgba(255,210,122,.45)}
+.operations{min-width:0}
+.operations .dashboard-layout{margin-top:16px}
+.ready-banner{display:flex;justify-content:space-between;align-items:center;gap:20px;background:linear-gradient(135deg,#141d30,#10182a);border-left:3px solid #4cc3d9}
+.ready-banner h2{font-size:21px;margin-top:4px}
+.ready-banner p{max-width:640px;margin-bottom:0}
+.ready-state{display:flex;flex-direction:column;align-items:flex-end;gap:8px;text-align:right;white-space:nowrap}
+.metric{box-shadow:0 8px 24px rgba(4,8,18,.18)}
+.metric-note{display:block;color:#9db4d6;font-size:12px;margin-top:3px}
+.telemetry,.assistant,.readiness{box-shadow:0 10px 28px rgba(4,8,18,.22)}
+.card{background:linear-gradient(145deg,#141d30,#121a2d)}
+.readiness-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.readiness-grid>div{display:flex;align-items:center;gap:10px;border:1px solid #26344f;border-radius:8px;padding:10px;background:#10182a}
+.gate{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#26344f;color:#ffd27a;font-weight:800;flex:none}
+.action-bar{background:#10182a;border:1px solid #26344f;border-radius:10px;padding:10px}
+.danger-static{border-color:#79514f!important;color:#ffb4b4!important}
+.dashboard-strip .bar{margin-top:8px;height:6px}
+@media (max-width:1000px){.readiness-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:800px){.app-shell{grid-template-columns:1fr}.workspace-rail{position:static;min-height:0}.rail-status{display:none}.workspace-rail{display:flex;flex-wrap:wrap}.rail-label{width:100%}.rail-item{margin:2px}.ready-banner{align-items:flex-start}.readiness-grid{grid-template-columns:1fr}}

@@ -13,13 +13,27 @@
 <main id="main" class="w">
 <div class="row" style="margin:0"><h1 style="font-size:32px">Dashboard</h1><span class="sample">Sample layout - no live account or trading</span></div>
 <div class="dashboard-strip">
-<div class="metric"><span class="metric-label">Bot slots</span><strong>2 / 10 preview</strong></div>
-<div class="metric"><span class="metric-label">Account type</span><strong>Demo only</strong></div>
-<div class="metric"><span class="metric-label">Virtual P&amp;L</span><strong class="g">Sample: 0.00</strong></div>
-<div class="metric"><span class="metric-label">Feed state</span><strong>Waiting</strong></div>
+<div class="metric"><span class="metric-label">Bot slots</span><strong>2 / 10 preview</strong><div class="bar"><i style="width:20%"></i></div></div>
+<div class="metric"><span class="metric-label">Account type</span><strong>Demo only</strong><span class="metric-note">No live account</span></div>
+<div class="metric"><span class="metric-label">Virtual P&amp;L</span><strong class="g">0.00</strong><span class="metric-note">No sample trades</span></div>
+<div class="metric"><span class="metric-label">Feed state</span><strong class="a">Waiting</strong><span class="metric-note">Minimum: 100 ticks</span></div>
 </div>
+<div class="app-shell">
+<aside class="workspace-rail" aria-label="Dashboard sections">
+<span class="rail-label">Workspace</span>
+<a class="rail-item active" href="#operations">Operations</a>
+<a class="rail-item" href="#telemetry">Bot telemetry</a>
+<a class="rail-item" href="#event-log">Event log</a>
+<a class="rail-item" href="#risk">Risk readiness</a>
+<div class="rail-status"><span class="status-dot"></span><div><b>System preview</b><div class="m">Demo mode active</div></div></div>
+</aside>
+<div class="operations" id="operations">
+<section class="card ready-banner" aria-labelledby="ready-title">
+<div><span class="k" style="margin:0">Current operating state</span><h2 id="ready-title">Waiting for a market connection</h2><p class="m">This public preview cannot stream ticks or execute paper actions. Review the readiness checklist before using the local application.</p></div>
+<div class="ready-state"><span class="tag a">STANDBY</span><span class="m">0 of 4 gates ready</span></div>
+</section>
 <div class="dashboard-layout">
-<section class="card telemetry" aria-labelledby="telemetry-title">
+<section class="card telemetry" id="telemetry" aria-labelledby="telemetry-title">
 <div class="card-heading"><h2 id="telemetry-title">Bot telemetry preview</h2><span class="m">Static sample</span></div>
 <div class="table-scroll"><table>
 <tr><th>Bot</th><th>Source</th><th>Market</th><th>Signal</th><th>Virtual P&amp;L</th><th>Status</th><th>Action</th></tr>
@@ -37,11 +51,11 @@
 </aside>
 </div>
 <div class="dashboard-layout">
-<section class="card" aria-labelledby="logs-title">
+<section class="card" id="event-log" aria-labelledby="logs-title">
 <div class="card-heading"><h2 id="logs-title">Execution log preview</h2><span class="m">No live events</span></div>
 <div class="console log"><div>[SAMPLE] LocalGuard and demo safeguards described.</div><div>[SAMPLE] No feed is connected on this public page.</div><div>[SAMPLE] Real trading remains disabled.</div><div>[SAMPLE] Paper results are not trading evidence.</div></div>
 </section>
-<section class="card" aria-labelledby="research-title">
+<section class="card" id="risk" aria-labelledby="research-title">
 <div class="card-heading"><h2 id="research-title">Market state</h2><span class="tag a">WAITING</span></div>
 <div class="grid markets">
 <div><h3>R_50</h3><div class="m">Waiting for ticks</div></div>
@@ -50,8 +64,19 @@
 </div>
 </section>
 </div>
+<section class="card readiness" aria-labelledby="readiness-title">
+<div class="card-heading"><h2 id="readiness-title">Pre-flight readiness</h2><span class="tag a">NOT READY</span></div>
+<div class="readiness-grid">
+<div><span class="gate pending">1</span><div><b>Market feed</b><div class="m">Waiting for ticks</div></div></div>
+<div><span class="gate pending">2</span><div><b>History depth</b><div class="m">100 ticks per symbol</div></div></div>
+<div><span class="gate pending">3</span><div><b>Risk gate</b><div class="m">No live evaluation</div></div></div>
+<div><span class="gate pending">4</span><div><b>Paper account</b><div class="m">Demo mode only</div></div></div>
+</div>
+</section>
 <div class="k">Actions</div>
-<div class="row"><button class="btn" type="button" disabled title="Available in the local JARVIS app">Import strategy</button><button class="btn2" type="button" disabled title="Available in the local JARVIS app">Halt all</button><span class="m">Controls shown for illustration are disabled on this website.</span></div>
+<div class="row action-bar"><button class="btn" type="button" disabled title="Available in the local JARVIS app">Import strategy</button><button class="btn2" type="button" disabled title="Available in the local JARVIS app">Start paper bots</button><button class="btn danger-static" type="button" disabled title="Available in the local JARVIS app">Halt all</button><span class="m">Controls shown for illustration are disabled on this website.</span></div>
+</div>
+</div>
 </main>
 <footer>Preview of the JARVIS project: sample data, demo accounts and paper trading only. Not financial advice. The indices JARVIS studies behave like random walks, so paper results do not show a trading edge.</footer>
 </body>
