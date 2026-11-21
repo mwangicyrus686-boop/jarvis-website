@@ -10,8 +10,49 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><a class="brand" href="index.html">JARVIS</a><nav class="nav" style="padding:0;border:0" aria-label="Pages"><a href="index.html">Home</a><a href="dashboard.html" aria-current="page">Dashboard</a><a href="strategy-lab.html">Strategy Lab</a><a href="bots.html">Bots</a><a href="builder.html">Builder</a><a href="methodology.html">Methodology</a><a href="safety.html">Safety</a></nav><span class="sp" style="flex:1"></span><span class="pill ok">Demo / paper only</span><span class="pill">Preview site</span></header>
-<main id="main" class="w"><div class="row" style="margin:0"><h1 style="font-size:32px">Dashboard</h1><span class="sample">Sample layout: a new install starts with no trades</span></div><div class="grid"><div class="card"><h3>R_50</h3><div class="m"><div class="big">waiting</div>for ticks</div></div><div class="card"><h3>R_75</h3><div class="m"><div class="big">waiting</div>for ticks</div></div><div class="card"><h3>R_100</h3><div class="m"><div class="big">waiting</div>for ticks</div></div></div><div class="grid"><div class="card"><h3>Bot consensus</h3><table><tr><th>Bot</th><th>Vote</th></tr><tr><td>Trend</td><td>-</td></tr><tr><td>EMA</td><td>-</td></tr><tr><td>RSI</td><td>-</td></tr><tr><td>Momentum</td><td>-</td></tr><tr><td>Volatility</td><td>-</td></tr></table><p class="m">Needs at least 100 ticks per symbol before the bots can vote.</p></div><div class="card"><h3>Paper account</h3><table><tr><td>Balance (virtual)</td><td>10,000.00</td></tr><tr><td>Profit</td><td>0.00</td></tr><tr><td>Drawdown</td><td>0.0%</td></tr><tr><td>Win rate</td><td>no trades yet</td></tr></table><p class="m">Rise/Fall pays less than twice the stake, so the break-even win rate is above 50%.</p></div></div><div class="k">Paper trades report</div><div class="card"><table><tr><th>Time</th><th>Symbol</th><th>Direction</th><th>Result</th></tr><tr><td colspan="4" class="m">No paper trades yet. On the Assistant page, type start paper bots.</td></tr></table></div>
-<div class="k">Sample research checklist</div><div class="card"><table><tr><th>Check</th><th>Preview state</th><th>Why it matters</th></tr><tr><td>Fresh tick stream</td><td><span class="tag g">Waiting</span></td><td>Prevents decisions from stale data.</td></tr><tr><td>Enough history</td><td><span class="tag a">100 ticks needed</span></td><td>Sets a minimum sample for bot votes.</td></tr><tr><td>Risk gate</td><td><span class="tag">Standby</span></td><td>Can block weak or unsafe conditions.</td></tr><tr><td>Paper account only</td><td><span class="tag g">Enabled</span></td><td>Keeps all shown activity virtual.</td></tr></table></div></main>
+<main id="main" class="w">
+<div class="row" style="margin:0"><h1 style="font-size:32px">Dashboard</h1><span class="sample">Sample layout - no live account or trading</span></div>
+<div class="dashboard-strip">
+<div class="metric"><span class="metric-label">Bot slots</span><strong>2 / 10 preview</strong></div>
+<div class="metric"><span class="metric-label">Account type</span><strong>Demo only</strong></div>
+<div class="metric"><span class="metric-label">Virtual P&amp;L</span><strong class="g">Sample: 0.00</strong></div>
+<div class="metric"><span class="metric-label">Feed state</span><strong>Waiting</strong></div>
+</div>
+<div class="dashboard-layout">
+<section class="card telemetry" aria-labelledby="telemetry-title">
+<div class="card-heading"><h2 id="telemetry-title">Bot telemetry preview</h2><span class="m">Static sample</span></div>
+<div class="table-scroll"><table>
+<tr><th>Bot</th><th>Source</th><th>Market</th><th>Signal</th><th>Virtual P&amp;L</th><th>Status</th><th>Action</th></tr>
+<tr><td><strong>Trend sample</strong></td><td><span class="tag">Preview</span></td><td>R_75</td><td>Waiting</td><td class="g">0.00</td><td><span class="tag g">STANDBY</span></td><td><button class="btn2" type="button" disabled title="Available in the local JARVIS app">Halt</button></td></tr>
+<tr><td><strong>RSI sample</strong></td><td><span class="tag">Preview</span></td><td>R_50</td><td>Waiting</td><td class="g">0.00</td><td><span class="tag g">STANDBY</span></td><td><button class="btn2" type="button" disabled title="Available in the local JARVIS app">Halt</button></td></tr>
+</table></div>
+</section>
+<aside class="card assistant" aria-labelledby="assistant-title">
+<div class="card-heading"><h2 id="assistant-title">Assistant preview</h2><span class="tag">SAMPLE</span></div>
+<div class="console">
+<p class="msg bot"><b>JARVIS:</b> This is a static preview. No live market or assistant service is connected.</p>
+<p class="msg"><b>Example:</b> "Show sample status"</p>
+</div>
+<div class="row"><input readonly aria-label="Assistant query example" value="Local app controls only"><button class="btn" type="button" disabled title="Available in the local JARVIS app">Send</button></div>
+</aside>
+</div>
+<div class="dashboard-layout">
+<section class="card" aria-labelledby="logs-title">
+<div class="card-heading"><h2 id="logs-title">Execution log preview</h2><span class="m">No live events</span></div>
+<div class="console log"><div>[SAMPLE] LocalGuard and demo safeguards described.</div><div>[SAMPLE] No feed is connected on this public page.</div><div>[SAMPLE] Real trading remains disabled.</div><div>[SAMPLE] Paper results are not trading evidence.</div></div>
+</section>
+<section class="card" aria-labelledby="research-title">
+<div class="card-heading"><h2 id="research-title">Market state</h2><span class="tag a">WAITING</span></div>
+<div class="grid markets">
+<div><h3>R_50</h3><div class="m">Waiting for ticks</div></div>
+<div><h3>R_75</h3><div class="m">Waiting for ticks</div></div>
+<div><h3>R_100</h3><div class="m">Waiting for ticks</div></div>
+</div>
+</section>
+</div>
+<div class="k">Actions</div>
+<div class="row"><button class="btn" type="button" disabled title="Available in the local JARVIS app">Import strategy</button><button class="btn2" type="button" disabled title="Available in the local JARVIS app">Halt all</button><span class="m">Controls shown for illustration are disabled on this website.</span></div>
+</main>
 <footer>Preview of the JARVIS project: sample data, demo accounts and paper trading only. Not financial advice. The indices JARVIS studies behave like random walks, so paper results do not show a trading edge.</footer>
 </body>
 </html>

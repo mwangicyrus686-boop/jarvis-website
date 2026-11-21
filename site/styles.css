@@ -34,3 +34,20 @@ details[open]{border-color:#4cc3d9}
 .steps{list-style:none;padding:0;counter-reset:step}
 .steps li{counter-increment:step;background:#141d30;border:1px solid #26344f;border-radius:10px;padding:14px 14px 14px 48px;margin-top:10px;position:relative}
 .steps li::before{content:counter(step);position:absolute;left:14px;top:14px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#4cc3d9;color:#06222b;font-weight:800}
+.dashboard-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:18px 0}
+.metric{background:#10182a;border:1px solid #26344f;border-radius:10px;padding:12px 14px}
+.metric-label{display:block;color:#9db4d6;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.metric strong{font-size:15px}
+.dashboard-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:16px;margin-top:16px}
+.card-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.card-heading h2{font-size:17px}
+.table-scroll{overflow-x:auto}
+.console{background:#0a1020;border:1px solid #26344f;border-radius:8px;padding:12px;min-height:128px;font:13px/1.6 ui-monospace,Consolas,monospace;color:#9db4d6}
+.console.log{min-height:132px}
+.msg{padding:7px 9px;margin:6px 0;border-radius:6px;color:#cfe0f7}
+.msg.bot{border-left:3px solid #4cc3d9;background:#111d31}
+.assistant .row input{min-width:0}
+.markets{grid-template-columns:repeat(3,minmax(120px,1fr));margin:0}
+.markets div{border:1px solid #26344f;border-radius:8px;padding:10px}
+.markets h3{font-size:15px}
+@media (max-width:800px){.dashboard-layout{grid-template-columns:1fr}.markets{grid-template-columns:1fr}}
