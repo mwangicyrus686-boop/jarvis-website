@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | JARVIS</title>
+<meta name="description" content="Dashboard layout with sample data">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><a class="brand" href="index.html">JARVIS</a><nav class="nav" style="padding:0;border:0" aria-label="Pages"><a href="index.html">Home</a><a href="dashboard.html" aria-current="page">Dashboard</a><a href="strategy-lab.html">Strategy Lab</a><a href="bots.html">Bots</a><a href="builder.html">Builder</a><a href="methodology.html">Methodology</a><a href="safety.html">Safety</a></nav><span class="sp" style="flex:1"></span><span class="pill ok">Demo / paper only</span><span class="pill">Preview site</span></header>
+<main id="main" class="w"><div class="row" style="margin:0"><h1 style="font-size:32px">Dashboard</h1><span class="sample">Sample layout: a new install starts with no trades</span></div><div class="grid"><div class="card"><h3>R_50</h3><div class="m"><div class="big">waiting</div>for ticks</div></div><div class="card"><h3>R_75</h3><div class="m"><div class="big">waiting</div>for ticks</div></div><div class="card"><h3>R_100</h3><div class="m"><div class="big">waiting</div>for ticks</div></div></div><div class="grid"><div class="card"><h3>Bot consensus</h3><table><tr><th>Bot</th><th>Vote</th></tr><tr><td>Trend</td><td>-</td></tr><tr><td>EMA</td><td>-</td></tr><tr><td>RSI</td><td>-</td></tr><tr><td>Momentum</td><td>-</td></tr><tr><td>Volatility</td><td>-</td></tr></table><p class="m">Needs at least 100 ticks per symbol before the bots can vote.</p></div><div class="card"><h3>Paper account</h3><table><tr><td>Balance (virtual)</td><td>10,000.00</td></tr><tr><td>Profit</td><td>0.00</td></tr><tr><td>Drawdown</td><td>0.0%</td></tr><tr><td>Win rate</td><td>no trades yet</td></tr></table><p class="m">Rise/Fall pays less than twice the stake, so the break-even win rate is above 50%.</p></div></div><div class="k">Paper trades report</div><div class="card"><table><tr><th>Time</th><th>Symbol</th><th>Direction</th><th>Result</th></tr><tr><td colspan="4" class="m">No paper trades yet. On the Assistant page, type start paper bots.</td></tr></table></div>
+<div class="k">Sample research checklist</div><div class="card"><table><tr><th>Check</th><th>Preview state</th><th>Why it matters</th></tr><tr><td>Fresh tick stream</td><td><span class="tag g">Waiting</span></td><td>Prevents decisions from stale data.</td></tr><tr><td>Enough history</td><td><span class="tag a">100 ticks needed</span></td><td>Sets a minimum sample for bot votes.</td></tr><tr><td>Risk gate</td><td><span class="tag">Standby</span></td><td>Can block weak or unsafe conditions.</td></tr><tr><td>Paper account only</td><td><span class="tag g">Enabled</span></td><td>Keeps all shown activity virtual.</td></tr></table></div></main>
+<footer>Preview of the JARVIS project: sample data, demo accounts and paper trading only. Not financial advice. The indices JARVIS studies behave like random walks, so paper results do not show a trading edge.</footer>
+</body>
+</html>

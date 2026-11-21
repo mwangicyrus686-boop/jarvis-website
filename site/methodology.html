@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology | JARVIS</title>
+<meta name="description" content="A static preview of the JARVIS research and testing sequence">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><a class="brand" href="index.html">JARVIS</a><nav class="nav" style="padding:0;border:0" aria-label="Pages"><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="strategy-lab.html">Strategy Lab</a><a href="bots.html">Bots</a><a href="builder.html">Builder</a><a href="methodology.html" aria-current="page">Methodology</a><a href="safety.html">Safety</a></nav><span class="sp" style="flex:1"></span><span class="pill ok">Demo / paper only</span><span class="pill">Preview site</span></header>
+<main id="main" class="w">
+<div class="row" style="margin:0"><h1 style="font-size:32px">Research methodology</h1><span class="sample">Sample process</span></div>
+<p class="m">This page describes a cautious research sequence. It is a website preview, not a live data feed or trading system.</p>
+<ol class="steps">
+<li><b>Collect</b><div class="m">Review the selected Deriv indices only after a market feed is available.</div></li>
+<li><b>Measure</b><div class="m">Use indicators such as EMA, RSI, momentum and volatility as separate research inputs.</div></li>
+<li><b>Vote</b><div class="m">Compare bot observations and require enough consistent history before a consensus appears.</div></li>
+<li><b>Gate</b><div class="m">Apply stale-feed, position and risk checks that can prevent paper activity.</div></li>
+<li><b>Record</b><div class="m">Keep a virtual report so the workflow can be inspected later. No real-money action is allowed.</div></li>
+</ol>
+<div class="k">How to read a backtest</div>
+<details open>
+<summary>What the result represents</summary>
+<p>A backtest is a replay of a strategy against historical or previously recorded data. It cannot establish that future periods will behave the same way.</p>
+</details>
+<details>
+<summary>What to compare</summary>
+<ul><li>Return and drawdown side by side</li><li>Trade count and sample period</li><li>Out-of-sample or walk-forward periods</li><li>Costs and assumptions used by the test</li></ul>
+</details>
+<details>
+<summary>What not to conclude</summary>
+<p>Do not treat a paper result as evidence of a trading edge. The indices JARVIS studies behave like random walks.</p>
+</details>
+<div class="callout warning"><b>Preview note:</b> The methodology is explanatory only. Backtest and walk-forward actions remain in the local JARVIS application.</div>
+</main>
+<footer>Preview of the JARVIS project: sample data, demo accounts and paper trading only. Not financial advice. The indices JARVIS studies behave like random walks, so paper results do not show a trading edge.</footer>
+</body>
+</html>
